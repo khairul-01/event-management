@@ -1,0 +1,93 @@
+[
+   {
+     "id": 1,
+     "title": "Machine Learning Summit 2023",
+     "image": "https://example.com/conference1.jpg",
+     "author_name": "John Smith",
+     "author_image": "https://example.com/john_smith.jpg",
+     "reading_time": "12 mins",
+     "detail": "The Machine Learning Summit 2023 is a premier event bringing together experts from the field of artificial intelligence and machine learning. This conference will feature keynote speakers, workshops, and panel discussions on cutting-edge ML technologies. Attendees will have the opportunity to network with leading researchers and industry professionals. Don't miss this chance to stay updated on the latest advancements in ML!",
+     "time": "2023-11-15T09:00:00"
+   },
+   {
+     "id": 2,
+     "title": "Blockchain Innovators Conference",
+     "image": "https://example.com/conference2.jpg",
+     "author_name": "Alice Johnson",
+     "author_image": "https://example.com/alice_johnson.jpg",
+     "reading_time": "10 mins",
+     "detail": "The Blockchain Innovators Conference is the ultimate gathering for blockchain enthusiasts. Learn about the latest developments in blockchain technology, smart contracts, and decentralized finance. Our expert speakers will share their insights and experiences. Join us to explore the future of blockchain and network with industry leaders.",
+     "time": "2023-12-05T10:30:00"
+   },
+   {
+     "id": 3,
+     "title": "AI Ethics Symposium 2023",
+     "image": "https://example.com/conference3.jpg",
+     "author_name": "Emily Davis",
+     "author_image": "https://example.com/emily_davis.jpg",
+     "reading_time": "8 mins",
+     "detail": "The AI Ethics Symposium 2023 is a critical discussion on the ethical considerations surrounding artificial intelligence. Our lineup of experts will delve into topics such as bias in AI, privacy concerns, and responsible AI development. This symposium is a must-attend for anyone interested in the ethical implications of AI.",
+     "time": "2023-10-20T14:00:00"
+   },
+   {
+     "id": 4,
+     "title": "Cybersecurity Summit 2023",
+     "image": "https://example.com/conference4.jpg",
+     "author_name": "Michael Brown",
+     "author_image": "https://example.com/michael_brown.jpg",
+     "reading_time": "11 mins",
+     "detail": "Join us at the Cybersecurity Summit 2023 to learn about the latest trends and strategies in cybersecurity. Our expert speakers will cover topics such as threat detection, incident response, and securing cloud environments. Don't miss this opportunity to enhance your cybersecurity knowledge.",
+     "time": "2023-09-28T11:45:00"
+   },
+   {
+     "id": 5,
+     "title": "Data Science Conference",
+     "image": "https://example.com/conference5.jpg",
+     "author_name": "Sophia Turner",
+     "author_image": "https://example.com/sophia_turner.jpg",
+     "reading_time": "9 mins",
+     "detail": "The Data Science Conference is a gathering of data enthusiasts and experts. Explore the latest trends in data analysis, machine learning, and data visualization. Our speakers will share their experiences and insights into the world of data science. Join us to expand your data knowledge!",
+     "time": "2023-11-08T15:15:00"
+   },
+   {
+     "id": 6,
+     "title": "Virtual Reality Summit 2023",
+     "image": "https://example.com/conference6.jpg",
+     "author_name": "David Clark",
+     "author_image": "https://example.com/david_clark.jpg",
+     "reading_time": "10 mins",
+     "detail": "Experience the future of technology at the Virtual Reality Summit 2023. Dive into the world of virtual reality, augmented reality, and immersive experiences. Our expert speakers will showcase the latest VR innovations and applications. Join us for an unforgettable journey into the virtual realm.",
+     "time": "2023-12-12T13:30:00"
+   },
+   {
+     "id": 7,
+     "title": "IoT World Congress",
+     "image": "https://example.com/conference7.jpg",
+     "author_name": "Linda Williams",
+     "author_image": "https://example.com/linda_williams.jpg",
+     "reading_time": "12 mins",
+     "detail": "The IoT World Congress is your gateway to the Internet of Things. Discover the latest IoT technologies, applications, and industry trends. Expert speakers will discuss topics like IoT security, industrial IoT, and smart cities. Don't miss out on the future of connected devices!",
+     "time": "2023-10-10T09:30:00"
+   },
+   {
+     "id": 8,
+     "title": "Quantum Computing Symposium",
+     "image": "https://example.com/conference8.jpg",
+     "author_name": "Robert Turner",
+     "author_image": "https://example.com/robert_turner.jpg",
+     "reading_time": "9 mins",
+     "detail": "Join us at the Quantum Computing Symposium to explore the groundbreaking world of quantum computing. Learn about quantum algorithms, qubits, and quantum supremacy. Our expert speakers will guide you through the quantum revolution. Be part of the future of computation!",
+     "time": "2023-11-30T14:45:00"
+   },
+   {
+     "id": 9,
+     "title": "Artificial Intelligence in Healthcare Summit",
+     "image": "https://example.com/conference9.jpg",
+     "author_name": "Sarah Miller",
+     "author_image": "https://example.com/sarah_miller.jpg",
+     "reading_time": "11 mins",
+     "detail": "The Artificial Intelligence in Healthcare Summit brings together healthcare professionals and AI experts. Explore the role of AI in diagnostics, patient care, and drug discovery. Our speakers will share insights into AI applications in healthcare. Join us to revolutionize healthcare with AI!",
+     "time": "2023-09-15T10:00:00"
+   }
+ ]
+ 
