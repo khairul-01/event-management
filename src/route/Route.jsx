@@ -3,6 +3,7 @@ import Root from "../root/Root";
 import Home from "../pages/home/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import ConferenceDetails from "../pages/components/ConferenceDetails";
 
 
 
@@ -25,7 +26,9 @@ const router = createBrowserRouter([
             element: <Register></Register>
          },
          {
-            path: '/conference/:id'
+            path: '/conference/:id',
+            element: <ConferenceDetails></ConferenceDetails>,
+            loader: () => fetch('/conference.json'),
          }
       ]
    },
