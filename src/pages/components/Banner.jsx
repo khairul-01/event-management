@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import banner1 from '../../assets/banner1.jpg'
 import banner2 from '../../assets/banner2.jpg'
 import banner3 from '../../assets/banner3.jpg'
@@ -6,7 +7,7 @@ import banner4 from '../../assets/banner4.jpg'
 const Banner = () => {
    return (
       <div>
-         <div className="carousel w-full h-[600px]">
+         <div className="carousel w-full h-[700px]">
 
             <div id="slide1" className="carousel-item relative w-full">
             <div className="hero" style={{ backgroundImage: `url(${banner1})` }}>
@@ -15,7 +16,7 @@ const Banner = () => {
                      <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                         <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to='/register'><button className="btn btn-primary">Get Register</button></Link>
                      </div>
                   </div>
                </div>
