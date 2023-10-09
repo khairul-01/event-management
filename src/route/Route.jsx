@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ConferenceDetails from "../pages/components/ConferenceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
          },
          {
             path: '/conference/:id',
-            element: <ConferenceDetails></ConferenceDetails>,
+            element: <PrivateRoute><ConferenceDetails></ConferenceDetails></PrivateRoute>,
             loader: () => fetch('/conference.json'),
          }
       ]
