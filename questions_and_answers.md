@@ -20,8 +20,8 @@ console.log(greetign);
 
 #### Answer: A.  ?
 
-<i>Write your explanation here</i>
- Because greeting is an object and it is assigned with empty object. So, its output will be an empty object
+<i>Because greeting is an object and it is assigned with empty object. So, its output will be an empty object.</i>
+ 
 </p>
 </details>
 
@@ -45,8 +45,8 @@ sum(1, "2");
 
 #### Answer: C ?
 
-<i>Write your explanation here</i>
- sum() function has two argument, one is number type and another is string type. When we add number with string, it concatenate number and string as string. So, answer is C.
+<i>sum() function has two argument, one is number type and another is string type. When we add number with string, it concatenate number and string as string. So, answer is C.</i>
+ 
 </p>
 </details>
 
@@ -71,8 +71,8 @@ console.log(food);
 
 #### Answer: A ?
 
-<i>Write your explanation here</i>
-Because we don't change any value of food variable, so it's output will be same as assigned value of food.
+<i>Because we don't change any value of food variable, so it's output will be same as assigned value of food.</i>
+
 </p>
 </details>
 
@@ -96,8 +96,8 @@ console.log(sayHi());
 
 #### Answer: B ?
 
-<i>Write your explanation here</i>
-When the function is called, no argument is passed. so name variable didn't get value. so name is undefined.
+<i>When the function is called, no argument is passed. so name variable didn't get value. so name is undefined.</i>
+
 </p>
 </details>
 
@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C ?
 
-<i>Write your explanation here</i>
-When we loop nums array with for each function, we each time update count variabe by adding 1. since count initial vaue is 0, so its value after for each function is C.
+<i>When we loop nums array with for each function, we each time update count variabe by adding 1. since count initial vaue is 0, so its value after for each function is C.</i>
+
 </p>
 </details>
