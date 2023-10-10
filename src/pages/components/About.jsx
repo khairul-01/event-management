@@ -1,8 +1,10 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+   AOS.init();
    return (
-      <div className="my-16 space-y-5">
+      <div className="my-16 space-y-5" data-aos="fade-right">
          <h1 className="text-5xl text-center mb-9">All our dreams can come true, <span className="text-blue-600 block">if we have the courage to pursue them</span></h1>
          <div className="grid grid-cols-3 gap-5">
             <div className="card bg-base-100 shadow-xl">

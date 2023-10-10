@@ -4,10 +4,16 @@ import banner2 from '../../assets/banner2.jpg'
 import banner3 from '../../assets/banner3.jpg'
 import banner4 from '../../assets/banner4.jpg'
 import moment from 'moment/moment';
+// aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Banner = () => {
+
+   AOS.init();
    return (
-      <div>
+      <div data-aos="fade-right">
          <div className="carousel w-full h-[700px]">
 
             <div id="slide1" className="carousel-item relative w-full">
