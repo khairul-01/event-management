@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+// aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Conference = ({ confer }) => {
+   AOS.init();
    const { id, title, image, author_name, author_image, registration_fee, detail, time } = confer;
    return (
       <div>
-         <div className="card bg-base-100 shadow-xl">
+         <div className="card bg-base-100 shadow-xl" data-aos="fade-right">
             <figure><img className="w-full h-64" src={image} alt={title} /></figure>
             <div className="card-body">
                <h2 className="card-title">

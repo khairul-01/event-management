@@ -22,7 +22,7 @@ const Home = () => {
    },[])
 
    return (
-      <div>
+      <div data-aos="fade-right">
          <Banner></Banner>
          <About ></About>
          <h1 className="text-5xl my-9 text-center font-bold">Our Conference Services </h1>

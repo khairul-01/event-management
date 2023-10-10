@@ -13,13 +13,13 @@ const Banner = () => {
 
    AOS.init();
    return (
-      <div data-aos="fade-right">
-         <div className="carousel w-full h-[700px]">
+      <div>
+         <div className="carousel w-full h-[700px]" data-aos="fade-right">
 
-            <div id="slide1" className="carousel-item relative w-full">
+            <div id="slide1" className="carousel-item relative w-full"  >
                <div className="hero" style={{ backgroundImage: `url(${banner1})` }}>
                   <div className="hero-overlay bg-opacity-90"></div>
-                  <div className="hero-content text-center text-neutral-content">
+                  <div className="hero-content text-center text-neutral-content" >
                      <div className="w-4/5 space-y-7">
                         <h1 className='text-3xl'>Welcome to Better World</h1>
                         <h1 className="mb-5 text-5xl font-bold">Blockchain Innovators Conference</h1>
