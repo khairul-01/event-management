@@ -37,6 +37,7 @@ const Register = () => {
       createUser(email, password)
          .then(result => {
             console.log(result.user);
+            setRegisterSuccess('User created successfully')
             toast('User created successfully');
          })
          .catch(error => {
