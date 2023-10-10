@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-   const { Login } = useContext(AuthContext);
+   const { Login, signWithGoogle } = useContext(AuthContext);
    const navigate = useNavigate();
    const location = useLocation();
 
@@ -18,17 +18,6 @@ const Login = () => {
       const form = new FormData(e.currentTarget);
       const email = form.get('email');
       const password = form.get('password');
-
-      if (password.length < 6) {
-         setLoginError('Password should be at least 6 characters');
-         toast('Password should be at least 6 characters');
-         return;
-      }
-      else if (!/[A-Z]/.test(password)) {
-         setLoginError('Password should have at least one uppercase letter characters');
-         toast('Password should have at least one uppercase letter characters');
-         return;
-      }
 
       // sign in user account
       Login(email, password)
@@ -45,19 +34,31 @@ const Login = () => {
             toast('there is error', `${error.message}`);
             e.target.email.value = '';
             e.target.password.value = '';
+            setLoginError('Your email or password does not match');
          })
    }
+   const handleSignWithGoogle = () => {
+      signWithGoogle()
+         .then(result => {
+            navigate(location?.state ? location.state : '/');
+            console.log(result.user)
+         })
+         .then(error => {
+            console.error(error);
+         })
+   }
+
 
    return (
       <div>
          <div className="hero min-h-screen bg-base-200">
 
             <div className="hero-content flex-col">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+               <h1 className="text-5xl font-bold">Login now!</h1>
                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
                   <form onSubmit={handleSubmit} className="card-body">
-                     <ToastContainer/>
+                     <ToastContainer />
                      <div className="form-control">
                         <label className="label">
                            <span className="label-text">Email</span>
@@ -77,6 +78,10 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                      </div>
                   </form>
+                  <p>Log in with <button onClick={handleSignWithGoogle} className="btn underline">Google</button> </p>
+                  {
+                     loginError && <p className="text-red-400 bold">{loginError}</p>
+                  }
                   <p>New here? Please <Link to='/register' className="underline text-blue-600 btn-sm">Register</Link></p>
 
                </div>

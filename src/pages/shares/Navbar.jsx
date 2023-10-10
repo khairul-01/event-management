@@ -6,7 +6,7 @@ const Navbar = () => {
 
    const { user, logOut } = useContext(AuthContext);
    console.log('user', user);
-   console.log('user email', user.email);
+   // console.log('user email', user.email);
    const hanleSignOut = () => {
       logOut()
          .then(() => {
@@ -20,9 +20,14 @@ const Navbar = () => {
    const navLinks = <>
       <li><NavLink to='/'>Home</NavLink></li>
       <li><NavLink to='/about'>About</NavLink></li>
-      <li><NavLink to='/speaker'>Speaker</NavLink></li>
-      <li><NavLink to='/schedule'>Schedule</NavLink></li>
       <li><NavLink to='/login'>Login</NavLink></li>
+      {
+         user && <>
+            <li><NavLink to='/schedule'>Schedule</NavLink></li>
+            <li><NavLink to='/speaker'>Speaker</NavLink></li>
+         </>
+      }
+
    </>
    return (
       <div className="my-4">
@@ -47,7 +52,7 @@ const Navbar = () => {
                {
                   user ?
                      <div className="flex gap-2">
-                        <p>{user.email}</p>
+                        <p>{user?.email && user.email}</p>
                         <div className="avatar online">
                            <div className="w-8 rounded-full">
                               <img src="https://i.ibb.co/2YxnXZT/images.jpg" />

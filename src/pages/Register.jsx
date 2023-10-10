@@ -28,6 +28,10 @@ const Register = () => {
          setRegisterError('Password should have at least one uppercase letter characters');
          return;
       }
+      else if (!/[!#$%^&*()_+{}:;<>.?~]/.test(password)) {
+         setRegisterError('Password should have at least one special characters');
+         return;
+      }
 
       // create user account
       createUser(email, password)

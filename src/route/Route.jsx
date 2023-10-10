@@ -6,6 +6,8 @@ import Register from "../pages/Register";
 import ConferenceDetails from "../pages/components/ConferenceDetails";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/shares/ErrorPage";
+import About from "../pages/components/About";
+import Count from "../pages/components/Count";
 
 
 
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
             element: <Home></Home>
          },
          {
+            path: '/about',
+            element: <About></About>
+         },
+         {
             path: '/login',
             element: <Login></Login>
          },
@@ -32,7 +38,11 @@ const router = createBrowserRouter([
             path: '/conference/:id',
             element: <PrivateRoute><ConferenceDetails></ConferenceDetails></PrivateRoute>,
             loader: () => fetch('/conference.json'),
-         }
+         },
+         {
+            path: '/schedule',
+            element: <PrivateRoute><Count></Count></PrivateRoute>
+         },
       ]
    },
 ])
