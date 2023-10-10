@@ -22,6 +22,13 @@ const firebaseConfig = {
 //   appId: "1:802944627559:web:fd06befd011fe23ee075c2",
 // };
 
+// VITE_APIKEY=AIzaSyCNCbNTrQs4Wvk1K1ob8Or4195EFa7l1t8
+// VITE_AUTHDOMAIN=conference-management-a8665.firebaseapp.com
+// VITE_PROJECTID=conference-management-a8665
+// VITE_STORAGEBUCKET=conference-management-a8665.appspot.com
+// VITE_MESSAGINGSENDERID=802944627559
+// VITE_APPID=1:802944627559:web:fd06befd011fe23ee075c2
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
