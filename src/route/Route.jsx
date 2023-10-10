@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ConferenceDetails from "../pages/components/ConferenceDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/shares/ErrorPage";
 
 
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
    {
       path: '/',
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage> ,
       children: [
          {
             path: '/',

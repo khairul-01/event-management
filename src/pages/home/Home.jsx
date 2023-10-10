@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Conference from "../components/Conference";
+import About from "../components/About";
+import Count from "../components/Count";
 
 
 const Home = () => {
@@ -16,12 +18,14 @@ const Home = () => {
    return (
       <div>
          <Banner></Banner>
-         <h1 className="text-3xl my-5 text-center font-bold">Our Conferences </h1>
+         <About></About>
+         <h1 className="text-5xl my-9 text-center font-bold">Our Conference Services </h1>
          <div className="grid md:grid-cols-3 gap-7">
             {
                conferences.map(conference => <Conference key={conference.id} confer={conference} ></Conference> )
             }
          </div>
+         <Count></Count>
       </div>
    );
 };

@@ -3,6 +3,7 @@ import banner1 from '../../assets/banner1.jpg'
 import banner2 from '../../assets/banner2.jpg'
 import banner3 from '../../assets/banner3.jpg'
 import banner4 from '../../assets/banner4.jpg'
+import moment from 'moment/moment';
 
 const Banner = () => {
    return (
@@ -10,13 +11,15 @@ const Banner = () => {
          <div className="carousel w-full h-[700px]">
 
             <div id="slide1" className="carousel-item relative w-full">
-            <div className="hero" style={{ backgroundImage: `url(${banner1})` }}>
+               <div className="hero" style={{ backgroundImage: `url(${banner1})` }}>
                   <div className="hero-overlay bg-opacity-90"></div>
                   <div className="hero-content text-center text-neutral-content">
-                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <Link to='/register'><button className="btn btn-primary">Get Register</button></Link>
+                     <div className="w-4/5 space-y-7">
+                        <h1 className='text-3xl'>Welcome to Better World</h1>
+                        <h1 className="mb-5 text-5xl font-bold">Blockchain Innovators Conference</h1>
+                        <p className="mb-5">The Blockchain Innovators Conference is the ultimate gathering for blockchain enthusiasts</p>
+                        <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
+                        <Link to='/register'><button className="btn btn-primary mt-9">Get Register</button></Link>
                      </div>
                   </div>
                </div>
@@ -29,10 +32,12 @@ const Banner = () => {
                <div className="hero" style={{ backgroundImage: `url(${banner2})` }}>
                   <div className="hero-overlay bg-opacity-90"></div>
                   <div className="hero-content text-center text-neutral-content">
-                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                     <div className="w-4/5 space-y-7">
+                        <h1 className='text-3xl'>Welcome to Better World</h1>
+                        <h1 className="mb-5 text-5xl font-bold">Artificial Intelligence in Healthcare Summit</h1>
+                        <p className="mb-5">The Artificial Intelligence in Healthcare Summit brings together healthcare professionals</p>
+                        <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
+                        <Link to='/register'><button className="btn btn-primary mt-9">Get Register</button></Link>
                      </div>
                   </div>
                </div>
@@ -42,13 +47,15 @@ const Banner = () => {
                </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
-            <div className="hero" style={{ backgroundImage: `url(${banner3})` }}>
+               <div className="hero" style={{ backgroundImage: `url(${banner3})` }}>
                   <div className="hero-overlay bg-opacity-90"></div>
                   <div className="hero-content text-center text-neutral-content">
-                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                     <div className="w-4/5 space-y-7">
+                        <h1 className='text-3xl'>Welcome to Better World</h1>
+                        <h1 className="mb-5 text-5xl font-bold">Machine Learning Summit 2023</h1>
+                        <p className="mb-5">The Machine Learning Summit 2023 is a premier event bringing together experts from the field of arti</p>
+                        <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
+                        <Link to='/register'><button className="btn btn-primary mt-9">Get Register</button></Link>
                      </div>
                   </div>
                </div>
@@ -58,13 +65,15 @@ const Banner = () => {
                </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
-            <div className="hero" style={{ backgroundImage: `url(${banner4})` }}>
+               <div className="hero" style={{ backgroundImage: `url(${banner4})` }}>
                   <div className="hero-overlay bg-opacity-90"></div>
                   <div className="hero-content text-center text-neutral-content">
-                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                     <div className="w-4/5 space-y-7">
+                        <h1 className='text-3xl'>Welcome to Better World</h1>
+                        <h1 className="mb-5 text-5xl font-bold">Virtual Reality Summit 2023</h1>
+                        <p className="mb-5">Experience the future of technology at the Virtual Reality Summit 2023. Dive into the world of virtu </p>
+                        <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
+                        <Link to='/register'><button className="btn btn-primary mt-9">Get Register</button></Link>
                      </div>
                   </div>
                </div>

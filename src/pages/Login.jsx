@@ -1,24 +1,50 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
 
    const { Login } = useContext(AuthContext);
+   const navigate = useNavigate();
+   const location = useLocation();
+
+   const [loginError, setLoginError] = useState('');
 
    const handleSubmit = (e) => {
       e.preventDefault();
       const form = new FormData(e.currentTarget);
       const email = form.get('email');
       const password = form.get('password');
+
+      if (password.length < 6) {
+         setLoginError('Password should be at least 6 characters');
+         toast('Password should be at least 6 characters');
+         return;
+      }
+      else if (!/[A-Z]/.test(password)) {
+         setLoginError('Password should have at least one uppercase letter characters');
+         toast('Password should have at least one uppercase letter characters');
+         return;
+      }
+
       // sign in user account
       Login(email, password)
          .then(result => {
             console.log(result.user);
+            console.log(result.user.email);
+            toast('You logged in successfully')
+            e.target.email.value = '';
+            e.target.password.value = '';
+            navigate(location?.state ? location.state : '/');
          })
          .catch(error => {
             console.error(error);
+            toast('there is error', `${error.message}`);
+            e.target.email.value = '';
+            e.target.password.value = '';
          })
    }
 
@@ -26,12 +52,12 @@ const Login = () => {
       <div>
          <div className="hero min-h-screen bg-base-200">
 
-            <div className="hero-content flex-col lg:flex-row-reverse">
-
+            <div className="hero-content flex-col">
+            <h1 className="text-5xl font-bold">Login now!</h1>
                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                  <h1 className="text-5xl font-bold">Login now!</h1>
-                  <form onSubmit={handleSubmit} className="card-body">
 
+                  <form onSubmit={handleSubmit} className="card-body">
+                     <ToastContainer/>
                      <div className="form-control">
                         <label className="label">
                            <span className="label-text">Email</span>
@@ -52,6 +78,7 @@ const Login = () => {
                      </div>
                   </form>
                   <p>New here? Please <Link to='/register' className="underline text-blue-600 btn-sm">Register</Link></p>
+
                </div>
             </div>
          </div>

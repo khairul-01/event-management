@@ -4,15 +4,17 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
 
-   const { user, logOut } = useContext(AuthContext)
+   const { user, logOut } = useContext(AuthContext);
+   console.log('user', user);
+   console.log('user email', user.email);
    const hanleSignOut = () => {
       logOut()
-      .then(()=>{
-         console.log('sign out successfully')
-      })
-      .catch(error => {
-         console.error(error)
-      })
+         .then(() => {
+            console.log('sign out successfully')
+         })
+         .catch(error => {
+            console.error(error)
+         })
    }
 
    const navLinks = <>
@@ -23,7 +25,7 @@ const Navbar = () => {
       <li><NavLink to='/login'>Login</NavLink></li>
    </>
    return (
-      <div>
+      <div className="my-4">
          <div className="navbar bg-base-100">
             <div className="navbar-start">
                <div className="dropdown">
@@ -34,7 +36,7 @@ const Navbar = () => {
                      {navLinks}
                   </ul>
                </div>
-               <a className="btn btn-ghost normal-case text-xl">Better World</a>
+               <a className="btn btn-ghost normal-case font-bold"><span className="text-green-950 text-lg">Better</span > <span className="text-amber-800 text-lg">World</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                <ul className="menu menu-horizontal px-1">
@@ -43,12 +45,21 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                {
-                  user?
-                  <button onClick={hanleSignOut} className="btn">sign out</button>
-                  :
-                  <Link to='/login' className="btn">Login</Link>
+                  user ?
+                     <div className="flex gap-2">
+                        <p>{user.email}</p>
+                        <div className="avatar online">
+                           <div className="w-8 rounded-full">
+                              <img src="https://i.ibb.co/2YxnXZT/images.jpg" />
+                           </div>
+                        </div>
+                        <button onClick={hanleSignOut} className="btn btn-sm">sign out</button>
+                     </div>
+
+                     :
+                     <Link to='/login' className="btn">Login</Link>
                }
-               
+
             </div>
          </div>
       </div>
