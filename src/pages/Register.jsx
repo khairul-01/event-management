@@ -20,6 +20,9 @@ const Register = () => {
       const email = form.get('email');
       const password = form.get('password');
 
+      e.target.email.value = '';
+      e.target.password.value = '';
+
       if (password.length < 6) {
          setRegisterError('Password should be at least 6 characters');
          return;
